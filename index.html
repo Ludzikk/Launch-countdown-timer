@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launch countdown timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="countdown">
+        <h1 class="countdown__title">we're launching soon</h1>
+        <ul class="countdown__list">
+          <li class="countdown__item">
+            <div class="countdown__top">
+              <p class="countdown__number" id="days">14</p>
+              <div class="countdown__one"></div>
+              <div class="countdown__two"></div>
+              <div class="countdown__circle countdown__circle--one"></div>
+              <div class="countdown__circle countdown__circle--two"></div>
+            </div>
+            <div class="countdown__bottom">
+              <p class="countdown__type">days</p>
+            </div>
+          </li>
+          <li class="countdown__item">
+            <div class="countdown__top">
+              <p class="countdown__number" id="hours">23</p>
+              <div class="countdown__one"></div>
+              <div class="countdown__two"></div>
+              <div class="countdown__circle countdown__circle--one"></div>
+              <div class="countdown__circle countdown__circle--two"></div>
+            </div>
+            <div class="countdown__bottom">
+              <p class="countdown__type">hours</p>
+            </div>
+          </li>
+          <li class="countdown__item">
+            <div class="countdown__top">
+              <p class="countdown__number" id="minutes">54</p>
+              <div class="countdown__one"></div>
+              <div class="countdown__two"></div>
+              <div class="countdown__circle countdown__circle--one"></div>
+              <div class="countdown__circle countdown__circle--two"></div>
+            </div>
+            <div class="countdown__bottom">
+              <p class="countdown__type">minutes</p>
+            </div>
+          </li>
+          <li class="countdown__item">
+            <div class="countdown__top">
+              <p class="countdown__number" id="seconds">34</p>
+              <div class="countdown__one swap"></div>
+              <div class="countdown__two swap"></div>
+              <div class="countdown__circle countdown__circle--one"></div>
+              <div class="countdown__circle countdown__circle--two"></div>
+            </div>
+            <div class="countdown__bottom">
+              <p class="countdown__type">seconds</p>
+            </div>
+          </li>
+        </ul>
+        <div class="countdown__links">
+          <ul class="countdown__icon-list">
+            <li class="countdown__icon-item">
+              <a href="#" class="countdown__link"
+                ><img
+                  src="./dist/img/icon-facebook.svg"
+                  alt="Facebook Icon"
+                  class="countdown__icon"
+              /></a>
+            </li>
+            <li class="countdown__icon-item">
+              <a href="#" class="countdown__link"
+                ><img
+                  src="./dist/img/icon-pinterest.svg"
+                  alt="Pinterest Icon"
+                  class="countdown__icon"
+              /></a>
+            </li>
+            <li class="countdown__icon-item">
+              <a href="#" class="countdown__link"
+                ><img
+                  src="./dist/img/icon-instagram.svg"
+                  alt="Instagram Icon"
+                  class="countdown__icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="countdown__stars"></div>
+        <div class="countdown__hills"></div>
+      </section>
+    </main>
+    <script src="./dist/js/script.min.js"></script>
+  </body>
+</html>

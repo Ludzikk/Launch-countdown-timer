@@ -1,0 +1,161 @@
+@use "./colors" as *;
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12em;
+
+  &__stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/bg-stars.svg");
+  }
+
+  &__hills {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background-image: url("../img/pattern-hills.svg");
+  }
+
+  &__links {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__icon-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon-item {
+    padding: 0 1em;
+  }
+
+  &__title {
+    padding: 0 2em;
+    padding-bottom: 4em;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 1em;
+    max-width: 800px;
+  }
+
+  &__number {
+    position: relative;
+    font-size: 4rem;
+    text-align: center;
+    color: $softred;
+    z-index: 4;
+  }
+
+  &__type {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $grayishblue;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5em;
+    width: 70px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+  }
+
+  &__bottom {
+    padding-top: 1em;
+  }
+
+  &__one,
+  &__two {
+    position: absolute;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__one {
+    top: 0;
+    background-color: hsl(236, 21%, 22%);
+  }
+
+  &__two {
+    bottom: 0;
+    background-color: $darkdesaturatedblue;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    width: 7.5px;
+    height: 7.5px;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    background-color: $verydarkblue;
+    z-index: 2;
+
+    &--one{
+      left: -3.75px;
+    }
+
+    &--two {
+      right: -3.75px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .countdown {
+    &__item {
+      margin: 0 0.75em;
+      width: 100px;
+    }
+
+    &__top {
+      height: 100px;
+    }
+  }
+}
+
+.swap {
+  animation: anim 1s infinite;
+}
+
+@keyframes anim{
+  0% {
+    transform: rotate3d(90,0,0,180deg);
+   }
+   
+   100% {
+     transform: rotate3d(0,0,0,0deg);
+   }
+}
